@@ -1,0 +1,12 @@
+apiVersion : v1
+kind : Service
+metadata :
+  name : appointment-microservice-deployment-service
+spec :
+  selector :
+    app : appointment-microservice-selector
+  ports :
+    - protocol : "TCP"
+      port : 8003
+      targetPort : 8003
+  type : LoadBalancer
